@@ -6,13 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --ext .js,.jsx pages components next.config.js",
-    "lint:fix": "eslint --fix --ext .js,.jsx pages components next.config.js"
+    "lint": "eslint --ext .js,.jsx ./pages/** next.config.js tailwind.config.js postcss.config.js",
+    "lint:fix": "eslint --fix --ext .js,.jsx ./pages/** next.config.js tailwind.config.js postcss.config.js",
+    "slint": "stylelint ./styles/** --formatter verbose",
+    "slint:fix": "stylelint --fix ./styles/** --formatter verbose"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.2",
     "next": "9.3.5",
+    "postcss-preset-env": "^6.7.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "tailwindcss": "^1.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
