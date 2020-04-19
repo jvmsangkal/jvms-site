@@ -1,4 +1,6 @@
-module.exports = {
+const withOffline = require('next-offline')
+
+const nextConfig = {
   webpack: (config, { dev }) => {
     if (dev) {
       config.module.rules.push({
@@ -17,3 +19,5 @@ module.exports = {
     return config
   },
 }
+
+module.exports = withOffline(nextConfig)
