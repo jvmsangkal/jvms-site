@@ -1,0 +1,10 @@
+{
+    "name": "jvmsangkal-site",
+    "short_name": "jvmsangkal-site",
+    "description": "Personal website of jvmsangkal",
+    "icons": [],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "start_url": "/",
+    "display": "standalone"
+}
