@@ -13,6 +13,7 @@ export default class extends Document {
         <Head>
           <link rel="manifest" href="/manifest.json" />
           <link rel="icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
