@@ -1,9 +1,11 @@
-import Layout from '../components/MainLayout'
+import CustomHead from '../components/customHead'
+import MainLayout from '../components/mainLayout'
 
 export default function About() {
   return (
-    <Layout>
+    <MainLayout>
+      <CustomHead />
       <p>This is the work page</p>
-    </Layout>
+    </MainLayout>
   )
 }

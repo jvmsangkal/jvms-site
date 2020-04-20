@@ -1,4 +1,3 @@
-import CommonHead from './CommonHead'
 import Header from './Header'
 import PropTypes from 'prop-types'
 
@@ -7,7 +6,6 @@ import PropTypes from 'prop-types'
 
 const MainLayout = (props) => (
   <div>
-    <CommonHead />
     <Header />
     {props.children}
   </div>

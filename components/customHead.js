@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 // consider using react-helmet: https://github.com/zeit/next.js/tree/canary/examples/with-react-helmet
-export default function CommonHead() {
+export default function CustomHead() {
   return (
     <Head>
       <title>John Viscel Sangkal</title>
