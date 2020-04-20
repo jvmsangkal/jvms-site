@@ -1,11 +1,11 @@
-import Head from 'next/head'
+import CommonHead from '../components/CommonHead'
 
 export default function Home() {
   return (
     <div className="container">
-      <Head>
+      <CommonHead>
         <title>John Viscel Sangkal</title>
-      </Head>
+      </CommonHead>
       <main>
         <h1 className="title">Welcome to my website</h1>
 

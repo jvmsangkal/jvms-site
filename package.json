@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --ext .js,.jsx ./pages/** next.config.js tailwind.config.js postcss.config.js",
-    "lint:fix": "eslint --fix --ext .js,.jsx ./pages/** next.config.js tailwind.config.js postcss.config.js",
+    "lint": "eslint --ext .js,.jsx ./pages/** ./components/** next.config.js tailwind.config.js postcss.config.js",
+    "lint:fix": "eslint --fix --ext .js,.jsx ./pages/** ./components/** next.config.js tailwind.config.js postcss.config.js",
     "slint": "stylelint ./styles/** --formatter verbose",
     "slint:fix": "stylelint --fix ./styles/** --formatter verbose"
   },
@@ -20,6 +20,7 @@
     "proptypes": "^1.1.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-helmet": "^6.0.0",
     "tailwindcss": "^1.2.0"
   },
   "devDependencies": {

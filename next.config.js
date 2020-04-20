@@ -1,6 +1,8 @@
 const withOffline = require('next-offline')
 
 const nextConfig = {
+  poweredByHeader: false,
+
   webpack: (config, { dev }) => {
     if (dev) {
       config.module.rules.push({
