@@ -1,8 +1,11 @@
+import App from 'next/app'
+import Router from 'next/router'
+
+import * as gtag from '../lib/gtag'
+
+// global CSS import
 import '../styles/index.css'
 
-// eslint-disable-next-line
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+Router.events.on('routeChangeComplete', (url) => gtag.pageview(url))
 
-export default MyApp
+export default App
