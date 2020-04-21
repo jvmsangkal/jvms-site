@@ -14,6 +14,7 @@ export default class extends Document {
           <link rel="manifest" href="/manifest.json" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <link rel="preconnect" href="https://www.google-analytics.com" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async

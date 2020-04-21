@@ -14,7 +14,7 @@ export default function Home() {
             width="1000"
             effect="blur"
             placeholderSrc={require('../public/images/background.jpg?lqip')}
-            src={require('../public/images/background.jpg?resize&size=1000')}
+            src={require('../public/images/background.jpg?resize&size=1500')}
           />
         </div>
         <h1 className="title">Welcome to my website</h1>
