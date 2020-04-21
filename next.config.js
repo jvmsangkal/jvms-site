@@ -1,6 +1,7 @@
 const withOffline = require('next-offline')
+const withOptimizedImages = require('next-optimized-images')
 
-const nextConfig = {
+let nextConfig = {
   poweredByHeader: false,
 
   webpack: (config, { dev }) => {
@@ -50,4 +51,7 @@ const nextConfig = {
   },
 }
 
-module.exports = withOffline(nextConfig)
+nextConfig = withOffline(nextConfig)
+nextConfig = withOptimizedImages(nextConfig)
+
+module.exports = nextConfig

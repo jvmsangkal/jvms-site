@@ -1,4 +1,5 @@
 import Header from './header'
+import Footer from './footer'
 import PropTypes from 'prop-types'
 
 // How to implement layouts with Higher Order Components:
@@ -7,7 +8,8 @@ import PropTypes from 'prop-types'
 const MainLayout = (props) => (
   <div>
     <Header />
-    {props.children}
+    <main>{props.children}</main>
+    <Footer />
   </div>
 )
 
