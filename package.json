@@ -17,6 +17,7 @@
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
     "imagemin-svgo": "^7.1.0",
+    "jimp": "^0.10.3",
     "lqip-loader": "^2.2.0",
     "next": "9.3.5",
     "next-offline": "^5.0.1",
@@ -27,6 +28,7 @@
     "react-dom": "16.13.1",
     "react-helmet": "^6.0.0",
     "react-lazy-load-image-component": "^1.4.3",
+    "responsive-loader": "^1.2.0",
     "tailwindcss": "^1.2.0",
     "webp-loader": "^0.6.0"
   },
