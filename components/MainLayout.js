@@ -1,4 +1,4 @@
-import Header from './Header'
+import Header from './header'
 import PropTypes from 'prop-types'
 
 // How to implement layouts with Higher Order Components:
