@@ -1,5 +1,8 @@
-import Router from 'next/router'
+import Router, { useRouter } from 'next/router'
+
+// third-party libraries import
 import { Helmet } from 'react-helmet'
+import { AnimatePresence, motion } from 'framer-motion'
 
 import * as gtag from '../lib/gtag'
 
@@ -9,8 +12,16 @@ import 'react-lazy-load-image-component/src/effects/blur.css'
 
 Router.events.on('routeChangeComplete', (url) => gtag.pageview(url))
 
+function handleExitComplete() {
+  if (typeof window !== 'undefined') {
+    window.scrollTo({ top: 0 })
+  }
+}
+
 // eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
+  const router = useRouter()
+
   return (
     <>
       <Helmet
@@ -65,7 +76,16 @@ function MyApp({ Component, pageProps }) {
           });
         `}</script>
       </Helmet>
-      <Component {...pageProps} />
+      <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+        <motion.div
+          key={router.route}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <Component {...pageProps} />
+        </motion.div>
+      </AnimatePresence>
     </>
   )
 }
