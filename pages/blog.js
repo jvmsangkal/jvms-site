@@ -1,10 +1,12 @@
-import CustomHead from '../components/customHead'
+import { Helmet } from 'react-helmet'
 import MainLayout from '../components/mainLayout'
 
 export default function Blog() {
   return (
     <MainLayout>
-      <CustomHead pageName="Blog" />
+      <Helmet>
+        <title>Blog</title>
+      </Helmet>
       <p>This is the blog page</p>
     </MainLayout>
   )

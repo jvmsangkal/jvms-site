@@ -1,39 +1,36 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { GA_TRACKING_ID } from '../lib/gtag'
+import { Helmet } from 'react-helmet'
 
-export default class extends Document {
+class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
-    return { ...initialProps }
+    // see https://github.com/nfl/react-helmet#server-usage for more information
+    // 'head' was occupied by 'renderPage().head', we cannot use it
+    return { ...initialProps, helmet: Helmet.renderStatic() }
+  }
+
+  // should render on <html>
+  get helmetHtmlAttrComponents() {
+    return this.props.helmet.htmlAttributes.toComponent()
+  }
+
+  // should render on <body>
+  get helmetBodyAttrComponents() {
+    return this.props.helmet.bodyAttributes.toComponent()
+  }
+
+  // should render on <head>
+  get helmetHeadComponents() {
+    return Object.keys(this.props.helmet)
+      .filter((el) => el !== 'htmlAttributes' && el !== 'bodyAttributes')
+      .map((el) => this.props.helmet[el].toComponent())
   }
 
   render() {
     return (
-      <Html lang="en">
-        <Head>
-          <link rel="manifest" href="/manifest.json" />
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-          <link rel="preconnect" href="https://www.google-analytics.com" />
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
-          />
-        </Head>
-        <body>
+      <Html {...this.helmetHtmlAttrComponents}>
+        <Head>{this.helmetHeadComponents}</Head>
+        <body {...this.helmetBodyAttrComponents}>
           <Main />
           <NextScript />
         </body>
@@ -41,3 +38,5 @@ export default class extends Document {
     )
   }
 }
+
+export default MyDocument

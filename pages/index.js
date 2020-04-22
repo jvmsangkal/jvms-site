@@ -1,15 +1,17 @@
-import CustomHead from '../components/customHead'
+import { Helmet } from 'react-helmet'
 import MainLayout from '../components/mainLayout'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function Home() {
   return (
     <MainLayout>
-      <CustomHead pageName="Home" />
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <div className="container">
         <div>
           <LazyLoadImage
-            alt="JV's picture"
+            alt="John Viscel"
             height="1000"
             width="1000"
             effect="blur"
