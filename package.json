@@ -14,6 +14,7 @@
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "classnames": "^2.2.6",
+    "framer-motion": "^1.10.3",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
     "imagemin-svgo": "^7.1.0",
