@@ -13,7 +13,9 @@ export default function Home() {
         </h1>
 
         <p></p>
-        <p>I am currently <strong>available for hire.</strong></p>
+        <p>
+          I am currently <strong>available for hire.</strong>
+        </p>
 
         <a
           href="https://github.com/jvmsangkal/Resume/raw/master/resume.pdf"
