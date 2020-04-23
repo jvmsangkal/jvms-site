@@ -30,7 +30,10 @@ class MyDocument extends Document {
     return (
       <Html {...this.helmetHtmlAttrComponents}>
         <Head>{this.helmetHeadComponents}</Head>
-        <body {...this.helmetBodyAttrComponents}>
+        <body
+          {...this.helmetBodyAttrComponents}
+          className="bg-gray-100 antialiased"
+        >
           <Main />
           <NextScript />
         </body>
