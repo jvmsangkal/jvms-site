@@ -8,7 +8,9 @@ export default function Home() {
         <title>Home</title>
       </Helmet>
       <div>
-        <h1 className="title">Welcome to my website</h1>
+        <h1 className="text-5xl font-bold uppercase tracking-wider">
+          John <span className="text-blue-700">Viscel</span>
+        </h1>
 
         <p className="description">Work in progress. Coming soon.</p>
 

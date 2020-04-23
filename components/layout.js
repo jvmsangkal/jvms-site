@@ -8,9 +8,9 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 // https://nextjs.org/learn/basics/using-shared-components/rendering-children-components
 
 const Layout = ({ children, home }) => (
-  <div className="min-h-screen grid lg:grid-cols-2 sm:grid-cols-1">
+  <div className="min-h-screen flex flex-wrap justify-center">
     {home ? (
-      <div>
+      <div className="lg:w-1/2 sm:w-full">
         <LazyLoadImage
           wrapperClassName="h-full w-full block"
           className="h-full w-full object-cover object-center"
@@ -23,9 +23,9 @@ const Layout = ({ children, home }) => (
     ) : (
       ''
     )}
-    <div className="px-16 py-8">
+    <div className="px-16 py-8 lg:w-1/2 sm:w-full flex flex-col">
       <Header />
-      <main>{children}</main>
+      <main className="flex-grow">{children}</main>
       <Footer />
     </div>
   </div>
