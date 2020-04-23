@@ -32,7 +32,7 @@ class MyDocument extends Document {
         <Head>{this.helmetHeadComponents}</Head>
         <body
           {...this.helmetBodyAttrComponents}
-          className="bg-gray-100 antialiased"
+          className="bg-gray-100 antialiased text-gray-900"
         >
           <Main />
           <NextScript />

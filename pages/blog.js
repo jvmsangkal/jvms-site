@@ -1,13 +1,13 @@
 import { Helmet } from 'react-helmet'
-import MainLayout from '../components/mainLayout'
+import Layout from '../components/layout'
 
 export default function Blog() {
   return (
-    <MainLayout>
+    <Layout>
       <Helmet>
         <title>Blog</title>
       </Helmet>
-      <p>This is the blog page</p>
-    </MainLayout>
+      <p>Work in progress. Coming soon.</p>
+    </Layout>
   )
 }

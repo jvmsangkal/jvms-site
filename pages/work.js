@@ -1,13 +1,13 @@
 import { Helmet } from 'react-helmet'
-import MainLayout from '../components/mainLayout'
+import Layout from '../components/layout'
 
 export default function About() {
   return (
-    <MainLayout>
+    <Layout>
       <Helmet>
         <title>Work</title>
       </Helmet>
-      <p>This is the work page</p>
-    </MainLayout>
+      <p>Work in progress. Coming soon.</p>
+    </Layout>
   )
 }

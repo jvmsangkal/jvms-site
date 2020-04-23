@@ -6,15 +6,13 @@ import InstagramIcon from '../assets/icons/instagram.svg'
 import TwitterIcon from '../assets/icons/twitter.svg'
 
 const Footer = () => (
-  <footer>
-    <div>
-      <FacebookIcon className="h-10 w-10 fill-current" />
-      <EmailIcon className="h-10 w-10 fill-current" />
-      <GithubIcon className="h-10 w-10 fill-current" />
-      <LinkedInIcon className="h-10 w-10 fill-current" />
-      <TwitterIcon className="h-10 w-10 fill-current" />
-      <InstagramIcon className="h-10 w-10 fill-current" />
-    </div>
+  <footer className="flex">
+    <FacebookIcon className="h-10 w-10 fill-current" />
+    <EmailIcon className="h-10 w-10 fill-current" />
+    <GithubIcon className="h-10 w-10 fill-current" />
+    <LinkedInIcon className="h-10 w-10 fill-current" />
+    <TwitterIcon className="h-10 w-10 fill-current" />
+    <InstagramIcon className="h-10 w-10 fill-current" />
   </footer>
 )
 
