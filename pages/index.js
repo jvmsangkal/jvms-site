@@ -12,7 +12,8 @@ export default function Home() {
           John <span className="text-blue-700">Viscel</span>
         </h1>
 
-        <p className="description">Work in progress. Coming soon.</p>
+        <p></p>
+        <p>I am currently <strong>available for hire.</strong></p>
 
         <a
           href="https://github.com/jvmsangkal/Resume/raw/master/resume.pdf"
@@ -20,8 +21,6 @@ export default function Home() {
         >
           Dowload Resume
         </a>
-
-        <a href="mailto:jvmsangkaL@gmail.com">Email me</a>
       </div>
     </Layout>
   )
