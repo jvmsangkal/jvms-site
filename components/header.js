@@ -23,12 +23,16 @@ const Header = () => {
 
   return (
     <header>
-      <div>
+      <nav className="my-8">
         {links.map(({ name, href }) => {
           let linkClass = classNames(
-            'mx-2',
-            'text-blue-500',
+            'mr-2',
+            'text-sm',
+            'text-blue-600',
             'hover:text-blue-800',
+            'font-bold',
+            'uppercase',
+            'tracking-wide',
             {
               underline: pathname === href,
             }
@@ -39,7 +43,7 @@ const Header = () => {
             </Link>
           )
         })}
-      </div>
+      </nav>
     </header>
   )
 }

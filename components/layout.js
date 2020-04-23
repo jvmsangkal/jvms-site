@@ -8,13 +8,13 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 // https://nextjs.org/learn/basics/using-shared-components/rendering-children-components
 
 const Layout = ({ children, home }) => (
-  <div className="grid md:grid-cols-2 sm:grid-cols-1">
+  <div className="min-h-screen grid lg:grid-cols-2 sm:grid-cols-1">
     {home ? (
       <div>
         <LazyLoadImage
+          wrapperClassName="h-full w-full block"
+          className="h-full w-full object-cover object-center"
           alt="John Viscel"
-          height="1000"
-          width="1000"
           effect="blur"
           placeholderSrc={require('../assets/images/background.jpg?lqip')}
           src={require('../assets/images/background.jpg?resize&size=1500')}
@@ -23,7 +23,7 @@ const Layout = ({ children, home }) => (
     ) : (
       ''
     )}
-    <div>
+    <div className="px-16 py-8">
       <Header />
       <main>{children}</main>
       <Footer />
