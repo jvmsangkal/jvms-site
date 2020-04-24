@@ -12,7 +12,7 @@ export default function Blog({ allPostsData }) {
       <Helmet>
         <title>Blog</title>
       </Helmet>
-      <div className="flex items-center">
+      <div className="flex items-center justify-start flex-wrap">
         <LazyLoadImage
           wrapperClassName="rounded-full h-16 w-16 object-cover object-center"
           className="rounded-full h-16 w-16 object-cover object-center"
@@ -21,7 +21,7 @@ export default function Blog({ allPostsData }) {
           placeholderSrc={require('../assets/images/profile.jpeg?lqip')}
           src={require('../assets/images/profile.jpeg?webp')}
         />
-        <h1 className="font-semibold ml-4 text-lg text-gray-800">
+        <h1 className="font-semibold ml-4 text-lg text-gray-800 w-2/3">
           Personal blog by{' '}
           <span className="text-blue-700">John Viscel Sangkal</span>
         </h1>

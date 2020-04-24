@@ -23,7 +23,7 @@ const Layout = ({ children, home }) => (
     ) : (
       ''
     )}
-    <div className="px-16 py-8 lg:w-1/2 sm:w-full flex flex-col">
+    <div className="p-6 md:px-16 md:py-8 lg:w-1/2 w-full flex flex-col">
       <Header />
       <main className="flex-grow">{children}</main>
       <Footer />
