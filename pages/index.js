@@ -36,7 +36,7 @@ export default function Home() {
           </a>
           <a
             className="ml-2 inline-block bg-gray-100 hover:bg-gray-200 py-2 px-3 rounded-md shadow-md uppercase text-sm font-semibold tracking-wider focus:shadow-outline"
-            href="mailto:jvmsangkaL@gmail.com"
+            href="mailto:jvmsangkal@gmail.com"
           >
             Get in touch
           </a>
