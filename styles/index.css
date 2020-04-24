@@ -4,6 +4,6 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
-.lazy-load-image-background {
+.block.lazy-load-image-background {
     display: block !important;
 }

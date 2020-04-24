@@ -1,5 +1,5 @@
 // import FacebookIcon from '../assets/icons/facebook-with-circle.svg'
-import EmailIcon from '../assets/icons/mail-with-circle.svg'
+// import EmailIcon from '../assets/icons/mail-with-circle.svg'
 import GithubIcon from '../assets/icons/github-with-circle.svg'
 import LinkedInIcon from '../assets/icons/linkedin-with-circle.svg'
 import InstagramIcon from '../assets/icons/instagram-with-circle.svg'
@@ -10,10 +10,10 @@ const icons = [
   //   Component: FacebookIcon,
   //   href: 'https://www.facebook.com/jvmsangkal',
   // },
-  {
-    Component: EmailIcon,
-    href: 'mailto:jvmsangkaL@gmail.com',
-  },
+  // {
+  //   Component: EmailIcon,
+  //   href: 'mailto:jvmsangkaL@gmail.com',
+  // },
   {
     Component: LinkedInIcon,
     href: 'https://www.linkedin.com/in/jvmsangkal/',
@@ -33,10 +33,11 @@ const icons = [
 ]
 
 const Footer = () => (
-  <footer className="flex -ml-1 mt-10">
+  <footer className="flex -ml-1 mt-10 items-center">
+    <span className="text-sm text-gray-600">Socials |</span>
     {icons.map((icon) => (
       <a
-        className="mr-2"
+        className="ml-2"
         rel="noopener noreferrer"
         target="_blank"
         href={icon.href}

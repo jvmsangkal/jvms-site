@@ -6,15 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --ext .js,.jsx ./pages/** ./components/** next.config.js tailwind.config.js postcss.config.js",
-    "lint:fix": "eslint --fix --ext .js,.jsx ./pages/** ./components/** next.config.js tailwind.config.js postcss.config.js",
+    "lint": "eslint --ext .js,.jsx ./pages/** ./components/** ./lib/** next.config.js tailwind.config.js postcss.config.js",
+    "lint:fix": "eslint --fix --ext .js,.jsx ./pages/** ./components/** ./lib/** next.config.js tailwind.config.js postcss.config.js",
     "slint": "stylelint ./styles/** --formatter verbose",
     "slint:fix": "stylelint --fix ./styles/** --formatter verbose"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "classnames": "^2.2.6",
+    "date-fns": "^2.12.0",
     "framer-motion": "^1.10.3",
+    "gray-matter": "^4.0.2",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
     "imagemin-svgo": "^7.1.0",
@@ -29,6 +31,8 @@
     "react-dom": "16.13.1",
     "react-helmet": "^6.0.0",
     "react-lazy-load-image-component": "^1.4.3",
+    "remark": "^12.0.0",
+    "remark-html": "^11.0.1",
     "responsive-loader": "^1.2.0",
     "tailwindcss": "^1.2.0",
     "webp-loader": "^0.6.0"

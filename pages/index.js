@@ -33,6 +33,14 @@ export default function Home() {
         >
           Dowload Resume
         </a>
+
+        <a
+          className="ml-2 inline-block mt-8 bg-gray-100 hover:bg-gray-200 py-2 px-3 rounded-md shadow-md uppercase text-sm font-semibold tracking-wider focus:shadow-outline"
+          href="mailto:jvmsangkaL@gmail.com"
+          download
+        >
+          Get in touch
+        </a>
       </div>
     </Layout>
   )
