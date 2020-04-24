@@ -1,37 +1,29 @@
 import { Helmet } from 'react-helmet'
-import MainLayout from '../components/mainLayout'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
+import Layout from '../components/layout'
 
 export default function Home() {
   return (
-    <MainLayout>
+    <Layout home>
       <Helmet>
         <title>Home</title>
       </Helmet>
-      <div className="container">
-        <div>
-          <LazyLoadImage
-            alt="John Viscel"
-            height="1000"
-            width="1000"
-            effect="blur"
-            placeholderSrc={require('../assets/images/background.jpg?lqip')}
-            src={require('../assets/images/background.jpg?resize&size=1500')}
-          />
-        </div>
-        <h1 className="title">Welcome to my website</h1>
+      <div>
+        <h1 className="text-5xl font-bold uppercase tracking-wider">
+          John <span className="text-blue-700">Viscel</span>
+        </h1>
 
-        <p className="description">Work in progress. Coming soon.</p>
-
+        <p></p>
+        <p>
+          I am currently <strong>available for hire.</strong>
+        </p>
         <a
+          className="inline-block mt-8 bg-blue-600 hover:bg-blue-900 text-white py-2 px-2 rounded-md shadow-lg uppercase text-sm font-semibold tracking-wider focus:shadow-outline"
           href="https://github.com/jvmsangkal/Resume/raw/master/resume.pdf"
           download
         >
           Dowload Resume
         </a>
-
-        <a href="mailto:jvmsangkaL@gmail.com">Email me</a>
       </div>
-    </MainLayout>
+    </Layout>
   )
 }
