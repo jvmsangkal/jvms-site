@@ -21,7 +21,7 @@ const Layout = ({ children, home }) => {
 
   return (
     <div className="min-h-screen flex flex-wrap justify-center">
-      {home ? (
+      {home && (
         <div className="lg:w-1/2 sm:w-full">
           <LazyLoadImage
             wrapperClassName="block lg:h-full w-full h-64"
@@ -32,8 +32,6 @@ const Layout = ({ children, home }) => {
             src={require('../assets/images/background.jpg?resize&size=1500')}
           />
         </div>
-      ) : (
-        ''
       )}
       <div className={contentDivClass}>
         <Header />
