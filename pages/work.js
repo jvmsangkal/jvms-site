@@ -34,14 +34,14 @@ function WorkCard({ link, title, lqImageSrc, imageSrc, shortDesc }) {
     <div className="mt-4 mb-8">
       <a className="hover:text-blue-700 hover:underline" href={link}>
         <LazyLoadImage
-          wrapperClassName="w-full max-w-xl rounded-md shadow-lg object-cover object-center"
-          className="w-full max-w-xl rounded-md shadow-lg object-cover object-center"
+          wrapperClassName="w-full max-w-4xl rounded-md shadow-lg object-cover object-center"
+          className="w-full max-w-4xl rounded-md shadow-lg object-cover object-center"
           alt={title}
           effect="blur"
           placeholderSrc={lqImageSrc}
           src={imageSrc}
         />
-        <h2 className="text-lg font-bold tracking-wide">{title}</h2>
+        <h2 className="text-lg font-bold tracking-wide mt-6">{title}</h2>
       </a>
       <p className="text-gray-600 mb-4">{shortDesc}</p>
       <hr />
