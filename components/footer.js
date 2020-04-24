@@ -33,7 +33,7 @@ const icons = [
 ]
 
 const Footer = () => (
-  <footer className="flex mt-10">
+  <footer className="flex -ml-1 mt-10">
     {icons.map((icon) => (
       <a
         className="mr-2"
