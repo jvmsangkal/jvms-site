@@ -12,8 +12,8 @@ const Layout = ({ children, home }) => (
     {home ? (
       <div className="lg:w-1/2 sm:w-full">
         <LazyLoadImage
-          wrapperClassName="h-full w-full block"
-          className="h-full w-full object-cover object-center"
+          wrapperClassName="block md:h-full w-full sm:h-64"
+          className="md:h-full w-full sm:h-64 object-cover object-center"
           alt="John Viscel"
           effect="blur"
           placeholderSrc={require('../assets/images/background.jpg?lqip')}
