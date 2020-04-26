@@ -19,7 +19,7 @@ export default function Blog({ allPostsData }) {
           alt="John Viscel"
           effect="blur"
           placeholderSrc={require('../assets/images/profile.jpeg?lqip')}
-          src={require('../assets/images/profile.jpeg?webp')}
+          src={require('../assets/images/profile.jpeg?resize&size=500')}
         />
         <h1 className="font-semibold ml-4 text-lg text-gray-800 w-2/3">
           Personal blog by{' '}
