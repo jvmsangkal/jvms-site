@@ -3,7 +3,3 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
-
-.block.lazy-load-image-background {
-    display: block !important;
-}

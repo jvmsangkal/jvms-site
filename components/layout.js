@@ -2,8 +2,7 @@ import Header from './header'
 import Footer from './footer'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-
-import { LazyLoadImage } from 'react-lazy-load-image-component'
+import ProgressiveImage from 'react-progressive-image'
 
 // How to implement layouts with Higher Order Components:
 // https://nextjs.org/learn/basics/using-shared-components/rendering-children-components
@@ -23,14 +22,19 @@ const Layout = ({ children, home }) => {
     <div className="min-h-screen flex flex-wrap justify-center">
       {home && (
         <div className="lg:w-1/2 sm:w-full">
-          <LazyLoadImage
-            wrapperClassName="block lg:h-full w-full h-64 object-cover object-center"
-            className="lg:h-full w-full h-64 object-cover object-center"
-            alt="John Viscel"
-            effect="blur"
-            placeholderSrc={require('../assets/images/background.jpg?lqip')}
+          <ProgressiveImage
+            className="block lg:h-full w-full h-64 object-cover object-center"
+            placeholder={require('../assets/images/background.jpg?lqip')}
             src={require('../assets/images/background.jpg?resize&size=1500')}
-          />
+          >
+            {(src) => (
+              <img
+                className="lg:h-full w-full h-64 object-cover object-center"
+                src={src}
+                alt="John Viscel"
+              />
+            )}
+          </ProgressiveImage>
         </div>
       )}
       <div className={contentDivClass}>

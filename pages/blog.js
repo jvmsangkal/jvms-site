@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import { getSortedPostsData } from '../lib/posts'
 import PropTypes from 'proptypes'
 import Date from '../components/date'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
+import ProgressiveImage from 'react-progressive-image'
 
 export default function Blog({ allPostsData }) {
   return (
@@ -13,20 +13,30 @@ export default function Blog({ allPostsData }) {
         <title>Blog</title>
       </Helmet>
       <div className="flex items-center justify-start flex-wrap">
-        <LazyLoadImage
-          wrapperClassName="rounded-full h-16 w-16 object-cover object-center"
+        <ProgressiveImage
           className="rounded-full h-16 w-16 object-cover object-center"
-          alt="John Viscel"
-          effect="blur"
-          placeholderSrc={require('../assets/images/profile.jpeg?lqip')}
-          src={require('../assets/images/profile.jpeg?resize&size=500')}
-        />
+          placeholder={require('../assets/images/profile.jpeg?lqip')}
+          src={require('../assets/images/profile.jpeg?webp')}
+        >
+          {(src) => (
+            <picture>
+              <source
+                srcSet={require('../assets/images/profile.jpeg?resize&size=500')}
+              />
+              <img
+                className="rounded-full h-16 w-16 object-cover object-center"
+                src={src}
+                alt="John Viscel"
+              />
+            </picture>
+          )}
+        </ProgressiveImage>
         <h1 className="font-semibold ml-4 text-lg text-gray-800 w-2/3">
           Personal blog by{' '}
           <span className="text-blue-700">John Viscel Sangkal</span>
         </h1>
       </div>
-      <section className="text-2xl p-1 mt-2">
+      <section className="text-2xl py-2 mt-2">
         <ul className="list-none list-outside">
           {allPostsData.map(({ id, date, title }) => (
             <li className="mt-4" key={id}>
