@@ -1,7 +1,8 @@
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import PropTypes from 'proptypes'
-import ProgressiveImage from 'react-progressive-image'
+import ProgressiveImage from 'react-progressive-graceful-image'
+import classNames from 'classnames'
 
 const works = [
   {
@@ -43,21 +44,23 @@ function WorkCard({
   return (
     <div className="mt-4 mb-8">
       <a className="hover:text-blue-700 hover:underline" href={link}>
-        <ProgressiveImage
-          className="w-full max-w-4xl rounded-md shadow-lg object-cover object-center"
-          placeholder={lqImageSrc}
-          src={imageSrc}
-        >
-          {(src) => (
-            <picture>
-              <source srcSet={fallbackSrc} />
-              <img
-                className="w-full max-w-4xl rounded-md shadow-lg object-cover object-center"
-                src={src}
-                alt={title}
-              />
-            </picture>
-          )}
+        <ProgressiveImage placeholder={lqImageSrc} src={imageSrc}>
+          {(src, loading) => {
+            const imgBgClass = classNames('progressive-image-background', {
+              'progressive-image-loaded': !loading,
+            })
+
+            return (
+              <picture className={imgBgClass}>
+                <source srcSet={fallbackSrc} />
+                <img
+                  className="w-full max-w-4xl rounded-md shadow-lg object-cover object-center"
+                  src={src}
+                  alt={title}
+                />
+              </picture>
+            )
+          }}
         </ProgressiveImage>
         <h2 className="text-lg font-bold tracking-wide mt-6">{title}</h2>
       </a>

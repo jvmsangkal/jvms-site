@@ -4,7 +4,8 @@ import Layout from '../components/layout'
 import { getSortedPostsData } from '../lib/posts'
 import PropTypes from 'proptypes'
 import Date from '../components/date'
-import ProgressiveImage from 'react-progressive-image'
+import ProgressiveImage from 'react-progressive-graceful-image'
+import classNames from 'classnames'
 
 export default function Blog({ allPostsData }) {
   return (
@@ -14,22 +15,26 @@ export default function Blog({ allPostsData }) {
       </Helmet>
       <div className="flex items-center justify-start flex-wrap">
         <ProgressiveImage
-          className="rounded-full h-16 w-16 object-cover object-center"
           placeholder={require('../assets/images/profile.jpeg?lqip')}
           src={require('../assets/images/profile.jpeg?webp')}
         >
-          {(src) => (
-            <picture>
-              <source
-                srcSet={require('../assets/images/profile.jpeg?resize&size=500')}
-              />
-              <img
-                className="rounded-full h-16 w-16 object-cover object-center"
-                src={src}
-                alt="John Viscel"
-              />
-            </picture>
-          )}
+          {(src, loading) => {
+            const imgBgClass = classNames('progressive-image-background', {
+              'progressive-image-loaded': !loading,
+            })
+            return (
+              <picture className={imgBgClass}>
+                <source
+                  srcSet={require('../assets/images/profile.jpeg?resize&size=500')}
+                />
+                <img
+                  className="rounded-full h-16 w-16 object-cover object-center"
+                  src={src}
+                  alt="John Viscel"
+                />
+              </picture>
+            )
+          }}
         </ProgressiveImage>
         <h1 className="font-semibold ml-4 text-lg text-gray-800 w-2/3">
           Personal blog by{' '}

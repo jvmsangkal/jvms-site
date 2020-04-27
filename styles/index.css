@@ -3,3 +3,14 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+.progressive-image-background {
+    filter: blur(15px);
+    opacity: 0.75;
+    transition: opacity 0.3s, filter 0.3s;
+}
+
+.progressive-image-background.progressive-image-loaded {
+    filter: blur(0);
+    opacity: 1;
+}
