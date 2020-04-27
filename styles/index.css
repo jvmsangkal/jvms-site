@@ -4,6 +4,13 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
-.block.lazy-load-image-background {
-    display: block !important;
+.progressive-image-background img {
+    filter: blur(15px);
+    opacity: 0.75;
+    transition: opacity 0.3s linear, filter 0.3s;
+}
+
+.progressive-image-background.progressive-image-loaded img {
+    filter: blur(0);
+    opacity: 1;
 }

@@ -33,7 +33,7 @@ const icons = [
 ]
 
 const Footer = () => (
-  <footer className="flex -ml-1 mt-10 items-center">
+  <footer className="flex mt-10 items-center">
     <span className="text-sm text-gray-600">Socials |</span>
     {icons.map((icon) => (
       <a
