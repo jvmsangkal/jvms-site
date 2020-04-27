@@ -22,13 +22,18 @@ const Layout = ({ children, home }) => {
             src={require('../assets/images/background.jpg?resize&size=1500')}
           >
             {(src, loading) => {
-              const imgClass = classNames(
-                'lg:h-full w-full h-64 object-cover object-center progressive-image-background',
-                {
-                  'progressive-image-loaded': !loading,
-                }
+              const imgBgClass = classNames('progressive-image-background', {
+                'progressive-image-loaded': !loading,
+              })
+              return (
+                <picture className={imgBgClass}>
+                  <img
+                    className="lg:h-full w-full h-64 object-cover object-center"
+                    src={src}
+                    alt="John Viscel"
+                  />
+                </picture>
               )
-              return <img className={imgClass} src={src} alt="John Viscel" />
             }}
           </ProgressiveImage>
         </div>

@@ -4,13 +4,13 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
-.progressive-image-background {
-    filter: blur(15px);
+.progressive-image-background img {
+    filter: blur(5px);
     opacity: 0.75;
-    transition: opacity 0.3s, filter 0.3s;
+    transition: opacity 0.3s linear, filter 0.3s;
 }
 
-.progressive-image-background.progressive-image-loaded {
+.progressive-image-background.progressive-image-loaded img {
     filter: blur(0);
     opacity: 1;
 }
