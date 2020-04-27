@@ -16,7 +16,7 @@ export default function Blog({ allPostsData }) {
       <div className="flex items-center justify-start flex-wrap">
         <ProgressiveImage
           placeholder={require('../assets/images/profile.jpeg?lqip')}
-          src={require('../assets/images/profile.jpeg?webp')}
+          src={require('../assets/images/profile.jpeg?resize&size=500')}
         >
           {(src, loading) => {
             const imgBgClass = classNames('progressive-image-background', {
@@ -25,8 +25,10 @@ export default function Blog({ allPostsData }) {
             return (
               <picture className={imgBgClass}>
                 <source
-                  srcSet={require('../assets/images/profile.jpeg?resize&size=500')}
+                  srcSet={require('../assets/images/profile.jpeg?webp')}
+                  type="image/webp"
                 />
+                <source srcSet={src} type="image/jpeg" />
                 <img
                   className="rounded-full h-16 w-16 object-cover object-center"
                   src={src}
