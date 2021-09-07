@@ -32,7 +32,7 @@
     "react-helmet": "^6.0.0",
     "react-progressive-graceful-image": "^0.6.11",
     "remark": "^12.0.0",
-    "remark-html": "^11.0.1",
+    "remark-html": "^13.0.2",
     "responsive-loader": "^1.2.0",
     "tailwindcss": "^1.2.0",
     "webp-loader": "^0.6.0"
