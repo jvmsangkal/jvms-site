@@ -29,8 +29,9 @@ export default function Home() {
         <div className="flex flex-wrap mt-8">
           <a
             className="inline-block bg-blue-600 hover:bg-blue-900 text-white py-2 px-3 rounded-md shadow-md uppercase text-sm font-semibold tracking-wider focus:shadow-outline"
-            href="https://github.com/jvmsangkal/Resume/raw/master/resume.pdf"
-            download
+            href="https://rxresu.me/jvmsangkal/resume-2024"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Dowload Resume
           </a>
